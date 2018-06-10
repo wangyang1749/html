@@ -1,0 +1,102 @@
+@charset="UTF-8";
+body{
+	margin: 0;
+	padding: 0;
+	width: 1200px;
+}
+.mainbody{
+	margin-top: 200px;
+	margin-left: 300px;
+	display: flex;
+}
+a{
+	text-decoration: none;
+}
+h2{
+	font-size: 50px;
+	font-family: 隶书;
+}
+
+.reviews{
+	margin-left: 100px;
+	color: #000;
+}
+.mainimg{
+	width: 860px;
+
+}
+.mainimg1{
+	margin-top: 20px;
+	width: 860px;
+	height: 380px;
+}
+
+.main2{
+	margin-left: 100px;
+}
+.information{
+	width: 300px;
+	height: 100px;
+	margin-top: 10px;
+	background: aqua;
+	display:block;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.columns h3{
+	font-size: 50px;
+}
+.maylike{
+	margin-top: 100px;
+	margin-left: 300px;
+	width: 600px;
+}
+.maylike img{
+	background-size:contain;
+	width:100%;
+	height: auto;
+}
+.food2 {
+	margin-left: 30px;
+}
+.food3{
+	margin-left: 30px;
+}
+.maylike a{
+	font-size: 50px;
+	color: #000;
+}
+.otherfood{
+	display: flex;
+}
+.reviewsplace{
+	margin-top: 100px;
+	margin-left: 300px;
+}
+.reviewsplace a{
+	font-size: 50px
+}
+.reviews1 .reviews2{
+	text-align: center;
+
+}
+.hisreviews1 .hisreviews2{
+	margin-left: 80px;
+}
+.hisname1 a{
+	font-size: 30px;
+	color: #000;
+}
+.hisname2 a{
+	font-size: 30px;
+	color: #000;
+}
+.otherreviews p{
+	margin-left: 95px;
+}
+.otherreviews a{
+	margin-left: 20px;
+}
+
+
+
