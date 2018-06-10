@@ -2,9 +2,423 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>美食推荐</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        #wrapper{
+            width: 100%;
+            background: #ffffff;
+            border: solid black 3px;
+        }
+        /*header*/
+        #header{
+            width: 100%;
+        }
+        #nav{
+            width: 100%;
+            height: 74px;
+            background: red;
+        }
+        #roll_pic{
+            width: 100%;
+            height: 515px;
+            background: beige;
+        }
+
+        /*内容区域*/
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            /*background: aqua;*/
+            overflow: hidden;
+        }
+        #food_list{
+            width: 880px;
+
+            /*background: blue;*/
+            float: left;
+        }
+        #food_list_title{
+            color: #606060;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 10px 10px 10px 0;
+            border-bottom: solid #9E9E9E 1px;
+        }
+        /*每一个食物*/
+        .food_list{
+            width: 273px;
+            font-size: 0px;
+            float: left;
+            margin: 3px 20px 15px 0;
+
+        }
+        .foot_list_pic img{
+            width: 100%;
+        }
+        .foot_list_txt{
+            padding: 20px 25px;
+            width: 223px;
+            height: 102px;
+            /*background: red;*/
+        }
+        .foot_list_txt a {
+            text-decoration: none;
+        }
+
+        .foot_list_txt h3 {
+            border-bottom: 1px solid #9E9E9E;
+            font-size: 27px;
+            color: #606060;
+            padding-bottom: 18px;
+        }
+        .foot_evaluate{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        /*右侧列表*/
+        #side_list{
+            float: left;
+            width: 300px;
+            /*background: salmon;*/
+            padding: 0px 10px 0 10px;
+            font-size: 0px;
+        }
+        div#side_list_search {
+            margin-bottom: 35px;
+        }
+        #side_list_search input[type=search]{
+            border: solid #9E9E9E 1px;
+            padding: 10px;
+            margin-top: 5px;
+            width: 254px;
+        }
+        #side_list_search input[type=button]{
+            border: none;
+            background: #8dc63f;
+            width: 37px;
+            height: 36px;
+            color: white;
+        }
+
+        div#side_list_user {
+            padding: 25px;
+            font-size: 14px;
+            margin-bottom: 35px;
+            border: solid #777777 1px;
+        }
+        div#side_list_user img {
+            width: 73px;
+            position: relative;
+            top: -200px;
+            left: 151px;
+        }
+        div#side_list_user span {
+            display: block;
+        }
+        span#side_list_user_title {
+            color: #8dc63f;
+            font-size: 20px;
+        }
+        span#side_list_username {
+            font-size: 16px;
+            color: #000;
+            /* font-weight: 100; */
+            font-weight: 900;
+        }
+       p#side_list_user_content {
+            color: #6b6b6b;
+        }
+
+        div#side_list_hot{
+            font-size: 14px;
+            margin-bottom: 35px;
+
+        }
+        #side_list_hot h3,#side_list_share h3{
+            color: #4c4c4c;
+            border-bottom: solid 1px #949090;
+            padding-bottom: 8px;
+            margin-bottom: 5px;
+        }
+        #side_list_hot img{
+            width: 100%;
+        }
+        #side_list_share{
+            font-size: 16px;
+        }
+        div#side_list_share img {
+            width: 50px;
+        }
+        #side_list_share span{
+            position: relative;
+            top: -20px;
+            left: 28px;
+        }
+
+        /*底部区域*/
+        #footer{
+            width: 100%;
+            height: 190px;
+            background: red;
+          }
+    </style>
 </head>
 <body>
-    
+    <!--wrapper-->
+    <div id="wrapper">
+        <!--header-->
+        <header id="header">
+            <!--顶部导航-->
+            <div id="nav"></div>
+            <!--轮播图-->
+            <div id="roll_pic"></div>
+        </header>
+        <!--容器 start-->
+        <div class="container">
+                <!--左边的食物列表-->
+                <div id="food_list">
+                    <div id="food_list_title">最新美食</div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="food_list">
+                        <!--图片-->
+                        <div class="foot_list_pic">
+                            <a href="">
+                                <img src="img/pic.jpg">
+                            </a>
+                        </div>
+                        <!--内容-->
+                        <div class="foot_list_txt">
+                            <a href="">
+                                <h3>玉米</h3>
+                                <div class="foot_evaluate">
+                                    评价
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            <!--右侧的推荐列表-->
+                <div id="side_list">
+                    <div id="side_list_search">
+                        <input type="search" >
+                        <input type="button" value="搜索">
+                    </div>
+                    <div id="side_list_user">
+                        <span id="side_list_user_title">美味的食物</span><br>
+                        <span id="side_list_username">小白兔</span><br>
+                        <p id="side_list_user_content">全巧克力的蛋糕:它不是最眩、最醒目的，但是总有忠实拥趸对它青睐有加。香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。</p>
+                        <img src="img/baitu.jpg">
+                    </div>
+                    <div id="side_list_hot">
+                        <h3>最热菜单</h3>
+                        <img src="img/pic_2.jpg">
+                        <img src="img/pic_2.jpg">
+                        <img src="img/pic_2.jpg">
+                        <img src="img/pic_2.jpg">
+
+                    </div>
+                    <div id="side_list_share">
+                        <h3>分享</h3>
+                        <img src="img/qq.jpg">
+                        <spam>分享到QQ</spam>
+
+                    </div>
+                </div>
+        </div>
+        <!--容器 end-->
+        <!--footer-->
+        <footer id="footer">
+        555
+        </footer>
+
+    </div>
 </body>
 </html>
