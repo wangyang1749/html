@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>开发者大会</title>
+<style>
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, lable, textarea, blockquote, th, td{
+	padding:0;
+	margin:0;
+}
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+
+
+#container{
+	width:960px;
+	margin:50px auto;
+	
+	
+}
+.item{
+	width:300px;
+	height:195px;
+	float:left;
+	margin:10px;
+	position:relative;
+	overflow:hidden;
+	
+
+	
+
+}
+.item img{
+	vertical-align:bottom;
+}
+
+.info{
+	position:absolute;
+	left:0;
+	top:155px;
+	color:#FFF;
+	background-color:rgba(0,0,0,0.5);
+	height:195px;
+	padding:0 5px;
+	transition:all 0.5s;
+	
+	
+}
+h2{
+	line-height:40px;
+	font-size:20px;
+	font-weight:normal;
+		
+}
+.item:hover .info{
+	top:0;
+	
+}
+
+</style>
+</head>
+
+<body>
+<div id="container" class="clearfix">
+<div class="item">
+	<img src="images/01.jpg" width="300" height="195" />
+    <div class="info">
+		<h2>Google I/O开发者大会</h2>
+		<p>Google I/O是由Google举行的网络开发者年会，讨论的焦点是用Google和开放网络技术开发网络应用，Google I/O 寓为“开放中创新”(Innovation in the Open)。</p>
+	</div>
+</div>
+
+<div class="item">
+	<img src="images/02.jpg" width="300" height="195" />
+	<div class="info">
+		<h2>苹果全球开发者大会</h2>
+		<p>苹果全球开发者大会，简称为“WWDC”，每年定期由苹果公司在美国举办。大会主要的目的是让苹果公司向研发者们展示最新的软件和技术。</p>
+	</div>
+  
+</div>
+
+<div class="item">
+	<img src="images/03.jpg" width="300" height="195" />
+	<div class="info">
+		<h2>微软Build开发者大会</h2>
+		<p>微软技术大携数字的力量蓄势发力，让您把握新的科技大势，与全球顶级技术专家面对面探讨最前沿的数字技术。</p>
+	</div>
+</div>
+
+</div>
+</body>
+</html>

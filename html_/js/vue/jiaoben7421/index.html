@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>毛笔刷画板Canvas特效 - 站长素材</title>
+<style>
+	body{
+		background-color: #cccccc;
+	}
+	.paper{
+		width: 50rem;
+		height: 25rem;
+		margin: 0 auto;
+		background-image: url("img/paper.jpg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	#graffiti{
+		width: 800px;
+		height: 400px;
+	}
+	.brush{
+		margin: 0 auto;
+		text-align: center;
+		text-align: center;
+	}
+	#pen1,#pen2{
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+	}
+	#pen1{
+		margin-left: 100px;
+	}
+	.active{
+		width: 35px;
+		height: 35px;
+		filter: opacity(0.6);
+	}
+	.clear{
+		background-color: beige;
+		padding: 0.5%;
+		border-radius: 5px;
+		width: 45px;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+
+<div class="paper">
+<canvas id="graffiti"></canvas>
+</div>
+
+<div class="brush">
+<p>选择笔刷：</p>
+<img src="img/pen2.png" class="active" id="pen2" alt="" onClick="selected(0)">
+<img src="img/pen1.png" id="pen1" alt="" onClick="selected(1)">
+<p onClick="clearPaper()" class="clear">清空</p>
+</div>
+
+<script type="text/javascript" src="js/brush.js"></script>
+<script type="text/javascript">
+(function (global) {
+	const config = {
+		el: 'graffiti', //canvasID选择器
+		width: 800, //canvas宽
+		height: 400, //canvas高
+		brushId: 0, //选择笔刷
+	};
+	const brush = new Brush(config);
+	global.clearPaper = function () {
+		window.console.log('清空');
+		brush.clear();
+	}
+	//选择笔刷
+	const brushNode = document.querySelectorAll('.brush>img'); //两个笔刷图片标签（数组）
+	global.selected = function(index) {
+		for(let i = 0; i < brushNode.length; i++){
+			if(index === i){
+				brushNode[i].setAttribute('class','active');
+				//改变选择的笔刷
+				brush.img = brushNode[i];
+			}else {
+				brushNode[i].setAttribute('class','');
+			}
+		}
+	}
+})(window);
+//上述JS写法包含了闭包概念，有不懂的同学可以多看看闭包函数。
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .video-col {
+            width: 70%;
+        }
+
+        .video-col iframe {
+            width: 100%;
+            height: 23rem;
+        }
+
+        .video-list-col {
+            width: 30%;
+            margin-left: 1rem;
+            border: solid 1px #4d555d;
+            height: 21rem;
+            padding: 1rem;
+            background: #fff;
+            overflow-y: auto;
+        }
+
+        .video-list-col dt {
+            font-weight: bold;
+            border-bottom: #4d555d 1px dashed;
+            padding-bottom: 0.5rem;
+        }
+
+        .video-list-col dd {
+            height: 2rem;
+            line-height: 2rem;
+        }
+
+        .video-list-col a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .video-list-col a:hover {
+            color: green;
+        }
+
+        .comment-title {
+            border-bottom: #4d555d 1px solid;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .comment-input textarea {
+            width: 90%;
+            border: none;
+        }
+
+        .comment-input a {
+            width: 70px;
+            height: 64px;
+            line-height: 64px;
+            padding: 4px 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            background-color: #00a1d6;
+            text-align: center;
+            color: #fff;
+            border: 1px solid #00a1d6;
+
+        }
+        .comment-list dd{
+            height: 3rem;
+            line-height: 3rem;
+            border-bottom: 1px solid #e5e9ef;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+
+        <div class="d-flex align-items">
+            <h2 class="logo">课程列表</h2>
+            <dl class="d-flex flex-grow">
+                <dd class="nav-item"><a href="index.html">首页</a></dd>
+                <dd class="nav-item"><a href="english.html">英语教学</a></dd>
+                <dd class="nav-item"><a href="math.html">数学教学</a></dd>
+            </dl>
+            <div>
+                <input type="text">
+                <a href="" class="btn">搜索</a>
+            </div>
+        </div>
+
+    </header>
+    <div class="container mt-1">
+        <div class="d-flex">
+            <div class="video-col">
+                <iframe src="video/02.mp4" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"
+                    name="myiframe"> </iframe>
+                <div class="comment mt-1">
+                    <div>
+                        <div class="comment-title"> <strong>888</strong> 评论</div>
+                        <div class="comment-input ">
+                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                            <a href="">提交</a>
+                        </div>
+                    </div>
+                    <dl class="comment-list">
+                        <dd>
+                            <div class="d-flex">
+                                <div>张三:</div>&nbsp;
+                                <p>很好</p>
+                            </div>
+                        </dd>
+                        <dd>
+                                <div class="d-flex">
+                                    <div>李四:</div>&nbsp;
+                                    <p>很好</p>
+                                </div>
+                            </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="video-list-col">
+                <dl>
+                    <dt>课程列表</dt>
+                    <dd><a href="video/02.mp4" target="myiframe">第一课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                    <dd><a href="video/02.mp4" target="myiframe">第二课</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-1">
+        <div class="container ">
+            © 2020 JXWZSJ
+        </div>
+    </footer>
+</body>
+
+</html>

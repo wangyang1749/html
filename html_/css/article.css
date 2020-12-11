@@ -1,0 +1,21 @@
+.article {
+    background: #fff;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.content p {
+    margin: 0.8em 0;
+}
+
+.article .title {
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+
+.author {
+    color: #6c757d !important;
+    font-size: 0.8rem;
+}

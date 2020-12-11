@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+
+    <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="cancelRequest">
+            <div>姓名：<input type="text" v-model="name"></div>
+            <div>头像：<input type="file" ref="file"></div>
+            <div @click="save">保存</div>
+        </div>
+    </div>
+    <script>
+        // 在 #app 标签下渲染一个按钮组件
+        var vueapp = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    active: 'home'
+                }
+
+            },
+            methods: {
+                onClickLeft() {
+                    vant.Toast('返回');
+                },
+                onClickRight() {
+                    vant.Toast('按钮');
+                }, save() {
+                    let formData = new FormData();
+                    formData.append('name', this.name)
+                    formData.append('file', this.$refs.file.files[0])
+
+                    axios.post('http://localhost:8080/api/upload', formData, {
+                        'Content-Type': 'multipart/form-data'
+                    }).then(res => {
+
+                    })
+                }
+            }
+            // template: `<van-button>按钮</van-button>`
+        });
+        // 调用函数组件，弹出一个 Toast
+        vant.Toast('提示');
+    </script>
+</body>
+
+</html>
